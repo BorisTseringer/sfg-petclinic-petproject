@@ -1,6 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.model;
 
-public class Person {
+public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
 
