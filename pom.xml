@@ -40,7 +40,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:BorisTseringer/sfg-petclinic-petproject.git</developerConnection>
-      <tag>HEAD</tag>
   </scm>
 
 </project>
