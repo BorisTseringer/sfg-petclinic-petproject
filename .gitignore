@@ -162,3 +162,7 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+
+########
+#Not sure
+*.releaseBackup
