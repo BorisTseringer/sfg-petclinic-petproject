@@ -5,8 +5,25 @@
     <title>Owners index page</title>
 </head>
 <body>
-
+<!--/*thymesVar id="owner" type="tseringer.boris.sfgpetclinicpetproject.model.Owner"*/-->
     <h1 th:text="'List of owners'">List of OWNERS</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="owner:${owners}">
+            <td th:text="${owner?.id}">Id</td>
+            <td th:text="${owner?.firstName}">First Name</td>
+            <td th:text="${owner?.lastName}">Last Name</td>
+        </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
