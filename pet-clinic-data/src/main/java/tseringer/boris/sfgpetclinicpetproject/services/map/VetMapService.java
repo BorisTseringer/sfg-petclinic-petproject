@@ -1,10 +1,11 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
+import org.springframework.stereotype.Service;
 import tseringer.boris.sfgpetclinicpetproject.model.Vet;
 import tseringer.boris.sfgpetclinicpetproject.services.VetService;
 
 import java.util.Set;
-
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {

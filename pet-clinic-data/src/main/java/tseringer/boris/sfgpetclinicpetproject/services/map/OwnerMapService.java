@@ -1,10 +1,12 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
+import org.springframework.stereotype.Service;
 import tseringer.boris.sfgpetclinicpetproject.model.Owner;
 import tseringer.boris.sfgpetclinicpetproject.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
