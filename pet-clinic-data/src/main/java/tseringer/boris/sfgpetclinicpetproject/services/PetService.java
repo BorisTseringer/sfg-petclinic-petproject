@@ -1,4 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.services;
 
-public interface PetService extends CrudService<PetService, Long>{
+import tseringer.boris.sfgpetclinicpetproject.model.Pet;
+
+public interface PetService extends CrudService<Pet, Long>{
 }

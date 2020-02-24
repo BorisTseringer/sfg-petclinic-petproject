@@ -1,11 +1,11 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
 import tseringer.boris.sfgpetclinicpetproject.model.Pet;
-import tseringer.boris.sfgpetclinicpetproject.services.CrudService;
+import tseringer.boris.sfgpetclinicpetproject.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Pet findById(Long id) {
         return super.findById(id);

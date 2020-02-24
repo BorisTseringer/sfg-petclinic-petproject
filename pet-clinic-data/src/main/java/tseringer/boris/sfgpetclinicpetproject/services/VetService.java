@@ -1,5 +1,7 @@
 package tseringer.boris.sfgpetclinicpetproject.services;
 
-public interface VetService extends CrudService<VetService, Long> {
+import tseringer.boris.sfgpetclinicpetproject.model.Vet;
+
+public interface VetService extends CrudService<Vet, Long> {
     VetService findBySecondName(String secondName);
 }
