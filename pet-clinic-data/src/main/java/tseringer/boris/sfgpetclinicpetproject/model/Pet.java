@@ -2,8 +2,9 @@ package tseringer.boris.sfgpetclinicpetproject.model;
 
 import java.time.LocalDate;
 
-public class Pet extends BaseEntity {
+public class Pet extends NameEntity {
 
+    //private String name;
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
