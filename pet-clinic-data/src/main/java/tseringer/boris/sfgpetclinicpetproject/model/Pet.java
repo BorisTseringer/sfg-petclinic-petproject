@@ -1,13 +1,33 @@
 package tseringer.boris.sfgpetclinicpetproject.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
-public class Pet extends NameEntity {
+@Entity
+@Table(name = "pets")
+public class Pet extends BaseEntity {
 
-    //private String name;
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne()
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne()
+    @JoinColumn(name = "owner_id")
     private Owner owner;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public PetType getPetType() {
         return petType;
