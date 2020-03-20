@@ -1,5 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tseringer.boris.sfgpetclinicpetproject.model.Owner;
 import tseringer.boris.sfgpetclinicpetproject.model.Pet;
@@ -10,6 +11,7 @@ import tseringer.boris.sfgpetclinicpetproject.services.PetTypeService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetService petService;
@@ -27,6 +29,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner owner) {
+
         if(owner != null){
             if(owner.getPets().size() > 0){ //my fix
                 owner.getPets().forEach(pet -> {

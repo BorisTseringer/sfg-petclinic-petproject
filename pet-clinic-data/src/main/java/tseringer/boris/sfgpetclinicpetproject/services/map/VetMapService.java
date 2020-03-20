@@ -1,5 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tseringer.boris.sfgpetclinicpetproject.model.Specialty;
 import tseringer.boris.sfgpetclinicpetproject.model.Vet;
@@ -7,7 +8,9 @@ import tseringer.boris.sfgpetclinicpetproject.services.SpecialtyService;
 import tseringer.boris.sfgpetclinicpetproject.services.VetService;
 
 import java.util.Set;
+
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;

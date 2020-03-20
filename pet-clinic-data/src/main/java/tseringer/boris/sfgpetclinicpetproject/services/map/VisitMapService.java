@@ -1,5 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import tseringer.boris.sfgpetclinicpetproject.model.Visit;
 import tseringer.boris.sfgpetclinicpetproject.services.PetService;
@@ -8,6 +9,7 @@ import tseringer.boris.sfgpetclinicpetproject.services.VisitService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService  {
 
     private final PetService petService;
