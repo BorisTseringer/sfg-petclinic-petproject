@@ -1,8 +1,6 @@
 package tseringer.boris.sfgpetclinicpetproject.services.map;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import tseringer.boris.sfgpetclinicpetproject.model.Owner;
 
@@ -73,14 +71,14 @@ class OwnerMapServiceTest {
 
     @Test
     void findBySecondName() {
-        Owner owner = ownerMapService.findBySecondName(lastName);
+        Owner owner = ownerMapService.findByLastName(lastName);
         assertNotNull(owner);
         assertEquals(lastName, owner.getLastName());
     }
 
     @Test
     void secondNameNotFound() {
-        Owner owner = ownerMapService.findBySecondName("foo");
+        Owner owner = ownerMapService.findByLastName("foo");
         assertNull(owner);
 
     }
